@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Game World e-Spor Arena - Turnuva Kayıt Formu</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 20px;
+      background-color: #e9ebee;
+      color: #333;
+    }
+    .container {
+      background-color: #ffffff;
+      padding: 35px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      max-width: 650px;
+      margin: auto;
+      border-top: 5px solid #ff6f00;
+    }
+    h1 {
+      text-align: center;
+      color: #004d40;
+      margin-bottom: 30px;
+      font-size: 2em;
+      font-weight: 600;
+    }
+    h2 {
+  color: #1a237e;
+  text-align: left;
+  font-size: 1.4em;
+  margin-top: 25px;
+  font-weight: bold;
+}
+    ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+    ul li {
+  margin-bottom: 10px;
+  list-style-type: disc;
+  margin-left: 25px;
+  font-weight: 500;
+}
+    .team-name-section, .player-section {
+      margin-top: 30px;
+    }
+    .team-name-section {
+      margin-bottom: 25px;
+      padding: 15px;
+      background-color: #e0f2f7;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .team-name-section label {
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #0056b3;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .team-name-section input[type="text"] {
+      width: calc(100% - 20px);
+      padding: 12px;
+      border: 1px solid #90caf9;
+      border-radius: 5px;
+      font-size: 1.1em;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .player-section {
+      border: 1px solid #b2dfdb;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 8px;
+      background-color: #f6fdfd;
+    }
+    .player-section h2 {
+  color: #1a237e;
+  text-align: left;
+  font-size: 1.4em;
+  margin-top: 25px;
+  font-weight: bold;
+}
+    .form-group {
+      margin-bottom: 18px;
+    }
+    label {
+      display: block;
+      margin-bottom: 7px;
+      color: #444;
+      font-weight: bold;
+    }
+    input[type="text"], input[type="tel"] {
+      width: calc(100% - 22px);
+      padding: 11px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 1em;
+    }
+    input[type="text"]:focus, input[type="tel"]:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+      outline: none;
+    }
+    .submission-info {
+      text-align: center;
+      margin-top: 30px;
+      color: #d32f2f;
+      font-size: 1.1em;
+      font-weight: bold;
+      padding: 10px;
+      background-color: #ffebee;
+      border-radius: 5px;
+      border: 1px dashed #ef9a9a;
+    }
+    .download-button {
+      display: block;
+      width: 250px;
+      padding: 15px 0;
+      margin: 40px auto 0 auto;
+      background-color: #1a73e8;
+      color: white;
+      text-align: center;
+      border-radius: 7px;
+      text-decoration: none;
+      font-size: 1.2em;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .download-button:hover {
+      background-color: #0d47a1;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  
+h3, h4 {
+  color: #1a237e;
+  text-align: left;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+.red-button {
+  background-color: #d32f2f !important;
+}
+.red-button:hover {
+  background-color: #b71c1c !important;
+}
+
+
+.event-info {
+  text-align: center;
+  background-color: #fff3e0;
+  border: 1px solid #ffcc80;
+  border-radius: 8px;
+  padding: 15px;
+  margin: -10px auto 30px auto;
+  max-width: 650px;
+  font-size: 1.1em;
+  color: #bf360c;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.event-info p {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+
+<style>
+  .custom-submit-button {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    padding: 20px 60px;
+    font-size: 1.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+  }
+
+  .custom-submit-button:hover {
+    background: linear-gradient(to right, #00c9ff, #92fe9d);
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  }
+</style>
+
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Game World e-Spor Arena - FC 25 Turnuvası</h1>
+
+<div class="event-info">
+  <p><strong>📍 Yer:</strong> Game World e-Spor Arena</p>
+  <p><strong>🗓️ Tarih:</strong> 12 Temmuz 2025, Cumartesi</p>
+<p><strong>Saat:</strong> 12:00</p>
+</div>
+
+
+<br>
+
+    <h2>Turnuvaya Katılım</h2>
+    <ul>
+      <li>Turnuva başvuruları <strong>10 Temmuz 2025, saat 23.59’a</strong> kadar devam edecektir.</li>
+      <li>Son başvuru tarihinden sonra yapılan başvuruların <strong>geçerliliği yoktur.</strong></li>
+      <li><strong>Sayfanın altındaki formu doldurup </strong>  gönderdiğinizde turnuvaya kaydınız tamamlanmış olur.</li>
+      <li>Kayıt işleminizi tamamladıktan <strong>kısa süre sonra</strong> sizinle iletişime geçilecektir.</li>
+      <li> Turnuva için belirlenen <strong>katılım ücreti</strong> 400 TL'dir.</li>
+      <li><strong>Katılım ücretleri</strong> TR48 0004 6003 3688 8000 1046 96 IBAN numarasına <strong>'Emre Büdük'</strong> adıyla ve açıklama kısmına <strong>"Adınız ve soyadınız"</strong> yazılarak gönderilmelidir.</li>
+      <li><strong>Son başvuru tarihine</strong> kadar formu göndermiş ancak katılım ücretini yatırmayan katılımcılar turnuvaya katılamaz.</li>
+      <li><strong>Yeterli katılım</strong> sağlanmadığı takdirde, ödenen ücretler <strong>2 gün içerisinde iade</strong> edilecektir.</li>
+
+<br>
+
+    <h2> Turnuva Kuralları ve Bilgilendirme</h2>
+
+<br>
+
+  <h2>1. Kura Çekimi</h2>
+  <ul>
+    <li>Kura çekimi, <strong>katılımcılara açık olmayacak şekilde</strong> web üzerinden gerçekleştirilecektir.</li>
+    <li><strong>Maç eşleşmeleri</strong> ve <strong>saatleri</strong>, 11 Temmuz 2025 saat 15.00'te
+  <a href="https://www.instagram.com/game_world_espor_arena/" target="_blank" style="text-decoration: underline;">
+    Instagram sayfamızda
+  </a> duyurulacaktır.
+</li>
+  </ul>
+
+<br>
+  <h2>2. Giriş ve Katılım</h2>
+  <ul>
+    <li>Turnuva alanına yalnızca <strong>oyuncular ve yetkililer</strong> giriş yapabilecektir; <strong>seyirci kabul edilmeyecektir</strong>.</li>
+    <li>Turnuvaya gelmeyen, son anda vazgeçen veya kendi isteğiyle çekilen oyunculara <strong>ücret iadesi yapılmayacaktır</strong>.</li>
+  </ul>
+
+<br>
+
+  <h2>3. Yaş Sınırı</h2>
+  <ul>
+    <li>Turnuva, <strong>13 yaş ve üzeri</strong> katılımcılara açıktır.</li>
+  </ul>
+
+
+<br>
+
+  <h2>4. Turnuva Süresi</h2>
+  <ul>
+    <li>Turnuvanın <strong>1 gün içerisinde tamamlanması</strong> planlanmaktadır.</li>
+    <li>Ancak yoğunluk durumunda <strong>2 güne uzatılabilir</strong>.</li>
+  </ul>
+
+<br>
+
+  <h2>5. Oyun Formatı ve Kurallar</h2>
+  <ul>
+    <li>Maçlar <strong>1’e 1 formatında</strong> oynanacaktır.</li>
+    <li>FC 25 oyunu <strong>PlayStation 5</strong> ve <strong>yüksek performanslı uzay kasa PC</strong> sistemlerinde oynanacaktır.</li>
+    <li>Hangi platformda oynayacağınız <strong>rastgele kura ile</strong> belirlenecektir; <strong>masa seçme şansı yoktur</strong>.</li>
+  </ul>
+
+<br>
+
+  <h2>6. Takım Seçimi</h2>
+  <ul>
+    <li>Her oyuncu turnuva boyunca <strong>aynı futbol takımını</strong> kullanmak zorundadır.</li>
+    <li>Rakip oyuncuların <strong>aynı takımı seçmesinde</strong> veya <strong>karşılaşmasında</strong> sakınca yoktur.</li>
+  </ul>
+
+<br>
+
+  <h2>7. Müsabaka Bilgileri</h2>
+  <ul>
+    <li>Aşama fark etmeksizin beraberlik durumunda <strong>uzatma</strong> ve daha sonrasında gerektiği takdirde  <strong>penaltı atışları</strong> uygulanır.</li>
+    <li><strong>2 galibiyet</strong> alan taraf bir üst tura çıkmaya hak kazanır.</li>
+<li><strong>Üçüncülük maçı</strong>, <strong>5 maçlık seri</strong> üzerinden oynanır; <strong>3 galibiyet alan taraf</strong> turnuvayı 3. olarak bitirmiş olur.</li>
+    <li><strong>Final maçı</strong>, <strong>5 maçlık seri</strong> üzerinden oynanır; <strong>3 galibiyet alan taraf</strong> şampiyon olur.</li>
+  </ul>
+ 
+
+</ul>
+<br>
+    
+    <h3>Diskalifiye Sebepleri</h3>
+<ul>
+  
+  <li><strong>Korner, taç, aut ve faul atışı</strong> gibi oyun duraklamalarında start tuşuna basılarak işlem yapılabilir; ancak oyun devam ederken start tuşuna kasıtlı basılırsa oyuncu diskalifiye edilir.</li>
+  <li><strong>Hakaret veya küfür:</strong> Yetkililere, rakip oyuncuya veya organizasyona yönelik sözlü sataşmalar diskalifiye sebebidir.</li>
+  <li><strong>Maça geç kalmak:</strong> Belirlenen saatte hazır bulunmayan oyuncular hükmen mağlup sayılır.</li>
+  <li><strong>İzinsiz temsil:</strong> Oyuncuyu temsil edecek şekilde bir başkasının oynaması yasaktır.</li>
+  <li><strong>Sportmenliğe aykırı davranışlar:</strong> Oyunu kasıtlı bırakmak, rakiple dalga geçmek gibi davranışlar diskalifiye ile sonuçlanır.</li>
+  <li><strong>İzinsiz çekim ve yayın:</strong> Organizatör onayı olmadan canlı yayın veya görüntü almak yasaktır.</li>
+  <li><strong>Teknik kurallara uymama:</strong> Radar kapatma, efsane kadro kullanılması, taktik dışı savunma gibi kurallara uymayan oyuncular diskalifiye edilir.</li>
+<li><strong>Turnuva ekipmanlarına müdahale edilmesi</strong>: Ekipmanlara müdahale edilmesi veya zarar verilmesi durumunda oyuncu doğrudan diskalifiye edilir.</li>
+</ul>
+
+<p><strong>Not: Karar mercii Game World e-Spor Arena yetkilileri olup, aldıkları kararlar kesindir ve gerektiği durumlarda yeni kurallar koyma yetkisine sahiptir.</p>
+
+<br>
+
+    <h3>Maç Ayarları</h3>
+<ul>
+      <li><strong>Stadyum seçimi</strong>, oyuncuların karşılıklı anlaşmasıyla belirlenir; anlaşma sağlanamazsa stadyum rastgele seçilecektir.</li>
+      <li> Ekranda <strong>radar</strong> olacak ve <strong>altta</strong> yer alacaktır. </li>
+      <li> <strong>Oyuncu ismi etiketi (name plate), skor</strong> ve <strong>süre</strong> kaldırılamaz.</li>
+      <li><strong>Efsane kadroların</strong> kullanılması yasaktır.</li>
+      <li><strong>Sakatlık</strong> seçeneği kapalı olacaktır.</li>
+      <li><strong>Elle oynama</strong> seçeneği kapalı olacaktır.</li>
+      <li><strong>Eski savunma (legacy)</strong> defans sistemi yasaktır.</li>
+      <li><strong>Savunma sistemi</strong> her iki kullanıcıda da "Taktiksel Savunma Sistemi" olacaktır.</li>   
+      <li><strong>Maç süresi</strong> 6 dakikadır. (Her devre için)</li>
+      <li><strong>Oyun hızı</strong> normal olacaktır.</li>
+      <li><strong>Hava Durumu</strong> açık (yağış yok) olacaktır.</li>
+    </ul>
+<br>
+
+<h2>Ödül Havuzu</h2>
+<ul>
+  <li>Ödüller, <strong>turnuvaya katılan oyuncu sayısına göre</strong> belirlenecektir.</li>
+  <li>Katılım arttıkça, <strong>ödül havuzu da büyüyecektir.</strong></li>
+  <li>Turnuvada dereceye giren <strong>ilk üç oyuncu</strong> ödül almaya hak kazanacaktır.</li>
+  <li>Detaylı ödül tablosu, <strong>kayıt süresi sona erdiğinde</strong><a href="https://www.instagram.com/game_world_espor_arena/" target="_blank" style="text-decoration: underline;">
+    Instagram sayfamızda
+  </a> duyurulacaktır.</li>
+</ul>
+
+
+<br>
+
+    <h1>Game World e-Spor Arena - FC 25 Turnuva Kayıt Formu</h1>
+<br>
+
+<p class="submission-info" style="background-color: #fffde7; color: #5d4037; border: 1px dashed #ffe082;">
+  Formda yer alan kişisel bilgiler yalnızca turnuva iletişimi amacıyla kullanılacak; üçüncü şahıslarla paylaşılmayacaktır.
+</p>
+
+<form action="https://formspree.io/f/mdkzgeey" method="POST">
+
+<form id="tournamentForm">
+
+  <div class="player-section">
+    <h2>Oyuncu Bilgileri</h2>
+    <div class="form-group">
+      <label for="player1_isim">İsim:</label>
+      <input type="text" id="player1_isim" name="player1_isim" required>
+    </div>
+    <div class="form-group">
+      <label for="player1_soyisim">Soyisim:</label>
+      <input type="text" id="player1_soyisim" name="player1_soyisim" required>
+    </div>
+    <div class="form-group">
+      <label for="player1_telefon">Telefon Numarası:</label>
+      <input type="tel" id="player1_telefon" name="player1_telefon" required>
+    </div>
+    <div class="form-group">
+      <label for="player1_Kullanilacak Takim">Turnuva Boyunca Kullanılacak Takım:</label>
+      <input type="text" id="Kullanilacak Takim" name="player1_Kullanilacak Takim" required>
+    </div>
+    <div class="form-group">
+      <label for="player1_mail">E-mail:</label>
+      <input type="email" id="player1_mail" name="player1_mail" required>
+    </div>
+  </div>
+
+  
+
+  
+
+  <div style="margin-top: 30px; background: #f1f8e9; padding: 15px; border-radius: 8px; border: 1px solid #c5e1a5;">
+    <div style="margin-bottom: 10px;">
+      <input type="checkbox" id="consent1" required>
+      <label for="consent1">
+        Bu form ile paylaştığım kişisel bilgilerimin turnuva iletişimi amacıyla kullanılmasına açık rıza gösteriyorum.
+      </label>
+    </div>
+    <div>
+      <input type="checkbox" id="consent2" required>
+      <label for="consent2">
+        Bu formu doldurarak, turnuva kurallarını okuduğumu ve tüm şartları kabul ettiğimi beyan ederim.
+      </label>
+    </div>
+  </div>
+
+<!-- Gmail ve WhatsApp Yönlendirme Butonları (Mobil ve Bilgisayar) -->
+
+
+
+
+
+<div class="slider-btn" style="text-align:center; margin: 40px 0;">
+  <button type="submit" class="custom-submit-button">🚀 Formu Gönder</button>
+</div>
+
+<h2>Whatsapp İletişim Hattı</h2>
+
+
+
+
+
+    
+
+</form>
+
+<div style="text-align: center; margin-top: 40px;">
+  <a href="https://api.whatsapp.com/send?phone=905345129200" target="_blank">
+    <button type="button" class="download-button" style="background-color: #25D366; width: 250px;">
+      📱 Mobil (iOS/Android) WhatsApp Uygulaması
+    </button>
+  </a>
+  <br><br>
+  <a href="https://web.whatsapp.com/send?phone=905345129200" target="_blank">
+    <button type="button" class="download-button" style="background-color: #25D366; width: 250px;">
+      💻 Bilgisayar WhatsApp Web Uygulaması
+    </button>
+  </a>
+</div>
+
+
+<div 
+<div>
+  
+  
+</div>
+    
+</div>
+
+<script>
+  document.getElementById("tournamentForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // Form gönderimini durdur
+
+    // Formun doğrulamasını yap
+    if (this.checkValidity()) {
+      window.location.href = "gönderildi.html"; // Her şey doğruysa yönlendir
+    } else {
+      alert("Lütfen tüm zorunlu alanları doldurun ve onay kutularını işaretleyin.");
+    }
+  });
+</script>
+  
+  
+
+</div>
+
+                    </form>
+
+<div 
+<div>
+  
+  
+</div>
+    
+</div>
+
+                </div>
+</div>
+    </form>
+
+<div 
+<div>
+  
+  
+</div>
+    
+</div>
+
+   
+
+    
+
+
+
+
+
+
+
+
